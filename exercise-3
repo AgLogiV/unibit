@@ -14,7 +14,7 @@ class Program
             if (number % factor == 0)
             {
                 largestPrimeFactor = factor;
-                number /= factor;  // Съкращаваме числото
+                number /= factor; 
             }
             else
             {
