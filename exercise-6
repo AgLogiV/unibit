@@ -11,13 +11,13 @@ class Program
 
         for (int i = 1; i <= n; i++)
         {
-            sumOfSquares += i * i;  // Събира квадратите на числата
-            squareOfSum += i;       // Събира числата
+            sumOfSquares += i * i;
+            squareOfSum += i;
         }
 
-        squareOfSum *= squareOfSum; // Вдига сбора на квадрат
+        squareOfSum *= squareOfSum;
 
-        difference = squareOfSum - sumOfSquares; // Изчислява разликата
+        difference = squareOfSum - sumOfSquares;
 
         Console.WriteLine("Разликата между квадрата на сбора и сбора на квадратите на първите 100 естествени числа е: " + difference);
     }
