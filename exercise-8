@@ -1,0 +1,24 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        const int sum = 1000;
+        for (int a = 1; a < sum / 3; a++)
+        {
+            for (int b = a + 1; b < sum / 2; b++) 
+            {
+                int c = sum - a - b;
+                if (a * a + b * b == c * c)
+                {
+                    Console.WriteLine("Тройката (a, b, c) е: ({0}, {1}, {2})", a, b, c);
+                    Console.WriteLine("Произведението на a, b и c е: " + (a * b * c));
+                    return;
+                }
+            }
+        }
+
+        Console.WriteLine("Няма намерена тройка.");
+    }
+}
