@@ -1,0 +1,24 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int n = 100;
+        long sumOfSquares = 0;
+        long squareOfSum = 0;
+        long difference;
+
+        for (int i = 1; i <= n; i++)
+        {
+            sumOfSquares += i * i;  // Събира квадратите на числата
+            squareOfSum += i;       // Събира числата
+        }
+
+        squareOfSum *= squareOfSum; // Вдига сбора на квадрат
+
+        difference = squareOfSum - sumOfSquares; // Изчислява разликата
+
+        Console.WriteLine("Разликата между квадрата на сбора и сбора на квадратите на първите 100 естествени числа е: " + difference);
+    }
+}
