@@ -1,0 +1,34 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        long number = 600851475143;
+        long largestPrimeFactor = 0;
+
+        // Начален делител
+        long factor = 2;
+        while (factor * factor <= number)
+        {
+            if (number % factor == 0)
+            {
+                largestPrimeFactor = factor;
+                number /= factor;  // Съкращаваме числото
+            }
+            else
+            {
+                // Преминаваме към следващия делител
+                factor++;
+            }
+        }
+
+        // Проверяваме останалото число след цикъла
+        if (number > 1)
+        {
+            largestPrimeFactor = number;
+        }
+
+        Console.WriteLine("Най-големият прост множител на числото 600851475143 е: " + largestPrimeFactor);
+    }
+}
